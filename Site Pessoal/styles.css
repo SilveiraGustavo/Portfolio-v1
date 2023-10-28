@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #35495E;
+    height: 100hv;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #E74C3C;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFF;
+    transition: .2s;
+}
+/* Estilização do Cabeçalho do site */
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #d7d0d0;
+    text-decoration: none;
+    font-size: 22px;
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover {
+    color: #FFF;
+    transform: scale(1.03);
+}
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Incio da estilização da logo marca do site */
+.logo {
+    color: #FFF;
+    font-size: 22px;
+}
+.logo span {
+    color: #E74C3C;
+}
+/* Fim da estilização da logo marca  */
+
+
+.btn-contato button:hover {
+    box-shadow: 0px 0px 8px #E74C3C;
+    transform: scale(1.05);
+}
+/* 
+Estilização do topo do site ou seção sobre */
+
+section.topo {
+    padding: 40px 4%;
+}
+
+section.topo .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo h1 {
+    color: #fff;
+    font-size: 45px;
+}
+.topo .descricao h1 span {
+    color: #E74C3C
+}
+
+.topo .descricao p {
+    color: #FFF;
+    margin: 40px 0;   
+}
+
+.topo .img-sobre img {
+    position: relative;
+    animation: flutuante 2s  ease-in-out infinite alternate;
+}
+@keyframes flutuante {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
