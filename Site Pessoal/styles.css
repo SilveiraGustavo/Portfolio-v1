@@ -28,6 +28,19 @@ body {
     color: #FFF;
     transition: .2s;
 }
+h2.title {
+    color: #FFF;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.title span {
+    color: #E74C3C;
+}
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #FFF;
+    transform: scale(1.05);
+}
 /* Estilização do Cabeçalho do site */
 header {
     padding: 40px 4%;
@@ -46,7 +59,7 @@ header a {
     display: inline-block;
     transition: .2s;
 }
-header a:hover {
+header nav.menu-desktop a:hover {
     color: #FFF;
     transform: scale(1.03);
 }
@@ -54,11 +67,68 @@ header nav ul {
     list-style: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
 }
 
+/* Estilo do Menu Hamburguer */
+.btn-abrir-menu i{
+    color: #FFF;
+    font-size: 38px;
+}
+.menu-mobile {
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+.menu-mobile.abrir-omenu {
+    width: 70%;
+}
+.menu-mobile.abrir-omenu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #FFF;
+    font-size: 30px;
+}
+.btn-fechar {
+    padding: 20px 4%;
+}
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav li a{
+    color: FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav li a:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+.overlay-menu {
+    background-color:#00000096;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
 /* Incio da estilização da logo marca do site */
 .logo {
     color: #FFF;
@@ -109,5 +179,224 @@ section.topo .flex{
     }
     100% {
         top: 30px;
+    }
+}
+ /* Estilização das Habilidades */
+section.habilidades {
+    padding: 40px 4%;
+}
+
+section.habilidades .flex {
+    gap: 60px;
+}
+
+.interface .especialidades-box {
+    color: #FFF;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: 1.2s;
+}
+
+.interface .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff7a;
+}
+
+.interface .especialidades-box i {
+    font-size: 70px;
+    color: #E74C3C;
+}
+.interface .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+/* Estilização SOBRE */
+
+section .sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre {
+    color: #FFF;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span {
+    color: #E74C3C;
+    display: block;
+}
+.sobre .txt-sobre p{
+    margin: 10px 0 ;
+    text-align: justify;
+}
+.btn-sociais button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #E74C3C;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+
+
+/* Estilização do formulário do site */
+
+section .formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #FFF;
+    font-size: 15px;
+}
+form input::placeholder {
+    color: #FFF;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 25px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #E74C3C;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Estilização do Rodapé do Site */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+    margin-top: 50px;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+.borda {
+    border-top: 2px solid #FFF;
+}
+
+footer .line-footer p i{
+    color: #FFF;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #FFF;
+}
+
+@media screen and (max-width: 1020px) {
+    .flex {
+        flex-direction: column-reverse;
+    }
+    h2.title {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    /* Cabeçalho do site */
+    .menu-desktop {
+        display: none;
+    }
+    /* Topo do site */
+    section .topo .flex {
+        gap: 40px;
+    }
+    section .topo {
+        padding: 20px 8%;
+    }
+    .topo h1 {
+        font-size: 30px;
+    }
+    .topo .img-sobre img {
+        width: 100%;
+    }
+
+    /* Habilidades */
+    section.habilidades {
+        padding: 40px 8%;
+    }
+    
+    /* Seção Sobre */
+    section .sobre {
+        padding: 80px 8%;
+    }
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .sobre .txt-sobre p{
+        font-size: 18px;
+        padding: 80px 8%;   
+         
+    }
+    .btn-sociais {
+        text-align: center;
+    }
+    .img-sobre img {
+        width: 100%;
+    }
+
+   /* Faltando  a seção de Portifolio que ainda não montei */
+
+    /* Estilização do formulario */
+    form {
+        padding: 80px 8%;
+    }
+    form .title h2 {
+        gap: 30px;
+    }
+    
+    /* Estilização do Rodapé */
+    footer .flex {
+        gap: 30px;
+    }
+    footer .line-footer {
+        text-align: center;
     }
 }
