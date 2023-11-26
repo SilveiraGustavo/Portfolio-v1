@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +41,7 @@ h2.title {
 h2.title span {
     color: #E74C3C;
 }
-button:hover, form .btn-enviar input:hover{
+button:hover, .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #FFF;
     transform: scale(1.05);
 }
@@ -141,11 +145,11 @@ header nav.menu-desktop ul li {
 
 
 .btn-contato button:hover {
-    box-shadow: 0px 0px 8px #E74C3C;
+    box-shadow: 0px 0px 8px #fff;
     transform: scale(1.05);
 }
 /* 
-Estilização do topo do site ou seção sobre */
+Estilização do topo do site */
 
 section.topo {
     padding: 40px 4%;
@@ -161,12 +165,13 @@ section.topo .flex{
     font-size: 45px;
 }
 .topo .descricao h1 span {
-    color: #E74C3C
+    color: #E74C3C;
 }
 
 .topo .descricao p {
     color: #FFF;
-    margin: 40px 0;   
+    margin: 40px 0;
+    text-align: justify;
 }
 
 .topo .img-sobre img {
@@ -194,14 +199,17 @@ section.portfolio .flex {
 
 .img-port {
     width: 360px;
-    height: 460px;
+    height: 260px;
     background-size: cover;
-    background-position: 100% 0%;
+    /* background-position: 100% 0%; */
     transition: 8s;
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+    background-position: center; /* Adicione esta linha para centralizar a imagem de fundo */
+    background-size: cover; /* Isso garante que a imagem de fundo cubra completamente a div */
 }
+
 
 .img-port:hover {
     background-position: 100% 100%;
@@ -228,10 +236,6 @@ section.portfolio .flex {
 .overlay:hover {
     opacity: 1;
 }
-
-
-
-
 
 
 
@@ -299,17 +303,28 @@ section.sobre .flex{
     height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: #E74C3C;
+    background-color: #ffffffce;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
+}
+.btn-sociais .bi-linkedin{
+    color: blue;
+}
+
+.img-perfil img {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 20px; 
 }
 
 
 
 /* Estilização do formulário do site */
 
-section .formulario {
+section.formulario {
     padding: 80px 4%;
 }
 
@@ -323,18 +338,16 @@ form {
     margin-top: 40px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     background-color: #242424;
     border: 0;
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
-    color: #FFF;
-    font-size: 15px;
-}
-form input::placeholder {
-    color: #FFF;
+    color: #fff;
+    font-size: 18px;
 }
 
 form textarea {
@@ -343,7 +356,7 @@ form textarea {
 }
 
 form .btn-enviar {
-    margin-top: 25px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -432,11 +445,27 @@ footer .line-footer p a {
     .btn-sociais {
         text-align: center;
     }
-    .img-sobre img {
-        width: 100%;
+    .img-perfil img {
+        max-width: 90%; /* Reduz a largura máxima da imagem */
+        margin-left: 5%; /* Adiciona espaçamento à esquerda */
+        margin-right: 5%; /* Adiciona espaçamento à direita */
+        border-radius: 20px; /* Ajusta o valor do border-radius */
     }
 
-   /* Faltando  a seção de Portifolio que ainda não montei */
+    /* Faltando  a seção de Portifolio que ainda não montei */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    
+    section.portfolio .flex {
+       gap: 60px;
+    }
 
     /* Estilização do formulario */
     form {

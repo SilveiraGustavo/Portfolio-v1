@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="index.js" defer></script>
-    
-    <title>Document</title>
+    <script src="scripts/Form.js" defer></script>
+    <script src="scripts/Menu.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <title>Portfólio GS</title>
 </head>
 <body>
 
@@ -26,10 +29,10 @@
             <!-- Abertura Classe Menu Desktop -->
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Habilidades</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Projetos</a></li>
+                    <li><a href="#topo">Inicio</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
                 </ul>
             </nav>
 
@@ -37,10 +40,12 @@
                 <i class="bi bi-list"></i>
             </div>
 
+            <!-- Abertura Classe Menu Mobile -->
             <div class="menu-mobile" id="menu-mobile">
                 <div class="btn-fechar">
                     <i class="bi bi-x-lg"></i>
                 </div>
+
                 <nav>
                     <ul>
                         <li><a href="">Inicio</a></li>
@@ -50,37 +55,41 @@
                     </ul>
                 </nav>
             </div>
-            <div class="overlay-menu" id="overlay"></div>
+            <div class="overlay-menu" id="overlay-menu"></div>
         </div>
     </header>
 
     
     <main>
         <!-- Inicio da seção Topo  -->
-        <section class="topo">
+        <section class="topo" id="topo">
             <div class="interface">
                 <div class="flex">
                     <div class="descricao">
                         <h1><span>Desenvolvedor</span> Front-end.</h1>
-                        <p> DEVO COLOCAR QUALQUER COISA MENOS SOBRE MIM, POIS VOU TER UMA SEÇÃO ESPECÍFICA PARA ISSO</p>
+                        <p> Como um Desenvolvedor Front-end, meu compromisso é ir além do código, 
+                            é moldar o futuro digital com criatividade, acessibilidade e usabilidade. 
+                            Crio experiências cativantes que não apenas funcionam, mas também inspiram 
+                            e envolvem os usuários, transformando visões em interfaces bonitas e funcionais 
+                            que refletem a harmonia entre design e tecnologia. </p>
 
                         <div class="btn-contato">
-                            <a href="#">
-                                <button> Entre em contato</button>
+                            <a href="#formulario">
+                                <button > Entre em contato</button>
                             </a>
                         </div>
 
                     </div>
 
                     <div class="img-sobre">
-                        <img src="./Images/GitHub.png   " alt="Gustavo Silveira">
+                        <img src="./Images/user.png   " alt="Gustavo Silveira">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Inicio da seção Habilidades -->
-        <section class="habilidades">
+        <section class="habilidades" id="habilidades">
             <div class="interface">
                 <h2 class="title">MINHAS <span>HABILIDADES</span></h2>
                 <div class="flex">
@@ -104,21 +113,25 @@
                         <i class="bi bi-filetype-jsx"></i>
                         <h3>React</h3>
                     </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-git"></i>
+                        <h3>Git</h3>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Inicio da seção Sobre -->
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
-                    <div class="img-sobre">
-                        <img src="./Images/html-5.png" alt="Minha Imagem">
+                    <div class="img-perfil">
+                        <img src="./Images/perfil.jpg" alt="Minha Imagem">
                     </div>
 
                     <div class="txt-sobre">
                         <h2>MUITO PRAZER,
-                            <span>SOU GUSTAVO SILVEIRA</span>
+                            <span>SOU GUSTAVO SILVEIRA.</span>
                         </h2>
 
                         <p>
@@ -131,7 +144,7 @@
                         <div class="btn-sociais">
                             <a href="https://www.linkedin.com/in/gustavo-silveira-3a3051255/"><button><i class="bi bi-linkedin"></i></button></a>
                             <a href="https://github.com/SilveiraGustavo"><button><i class="bi bi-github"></i></button></a>
-                            <a href="#"><button><i class="bi bi-arrow-down-circle-fill"></i></button></a>
+                            <a href="./Arquivos/PSO - IA.pdf" download target="_blank"><button><i class="bi bi-arrow-down-circle-fill"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -143,43 +156,46 @@
             <div class="interface">
                 <h2 class="title">MEU <span>PORTFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 1</div>
+                    <div class="img-port" style="background-image: url(./Images/tempoApp.png);">
+                        <a href="https://github.com/SilveiraGustavo/Preview_Tempo">
+                            <div class="overlay">App Climático</div>
+                        </a>
                     </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 2</div>
+                    <div class="img-port" style="background-image: url(./Images/SenhaApp.png);">
+                        <a href="https://github.com/SilveiraGustavo/Gerar_Senha">
+                            <div class="overlay">Gerador de Senhas</div>
+                        </a>
                     </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
-                        <div class="overlay">Projeto 3</div>
+                    <div class="img-port" style="background-image: url(./Images/TarefaApp.png);">
+                        <a href="https://github.com/SilveiraGustavo/To-do-list">
+                            <div class="overlay">Lista de Tarefas</div>
+                        </a>
                     </div>
+
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--portfolio-->
 
         <!-- Inicio da seção Formulário  -->
-        <section class="formulario">
+        <section class="formulario" id="formulario">
             <div class="interface">
                 <h2 class="title">FALE <span>COMIGO.</span></h2>
 
                 <form action="">
-                    <input type="text" placeholder="Seu nome:" required>
-                    <input type="text" placeholder="Seu e-mail:" required>
-                    <input type="text" placeholder="Seu  celular">
-
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-
-                    <div class="btn-enviar">
-                        <input type="submit" value="Enviar">
-                    </div>
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="text" name="celular" id="celular" placeholder="Seu celular:">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
-            </div>
-        </section>
+            </div><!--interface-->
+        </section><!--formulario-->
     </main>
 
     <footer>
         <div class="interface">
-            <div class="flex">
-                <div class="line-footer">
+            <div class="line-footer">
+                <div class="flex">
                     <div class="logo-footer">
                         <h2 class="title">Gustavo <span>Silveira</span></h2>
                     </div>
