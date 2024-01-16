@@ -195,13 +195,16 @@ section.portfolio {
 section.portfolio .flex {
     justify-content: space-around;
     margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .img-port {
     width: 360px;
     height: 260px;
     background-size: cover;
-    /* background-position: 100% 0%; */
+    max-width: 100%;
+    margin-top: 20px;
     transition: 8s;
     cursor: pointer;
     border-radius: 40px;
@@ -261,14 +264,15 @@ section.habilidades .flex {
     box-shadow: 0 0 8px #ffffff7a;
 }
 
-.interface .especialidades-box i {
-    font-size: 70px;
-    color: #E74C3C;
+.interface .especialidades-box .stacks {
+    max-width: 80px;
 }
-.interface .especialidades-box h3 {
-    font-size: 28px;
-    margin: 15px 0;
+.especialidades-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 
 /* Estilização SOBRE */
@@ -397,7 +401,7 @@ footer .line-footer p a {
     color: #FFF;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 576px) {
     .flex {
         flex-direction: column-reverse;
     }
