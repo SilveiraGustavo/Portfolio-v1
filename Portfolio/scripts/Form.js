@@ -20,7 +20,7 @@ function sendMail (e) {
             Username : "contatosilveiragustavo@gmail.com",
             Password : "21112FD548BADA088F1C740B4C961670B556",
             To : 'gustavodiassilveira7@gmail.com',
-            From : ` ${mail}`,
+            From :"contatosilveiragustavo@gmail.com",
             Subject: `Contato via Portfólio`,
             Body: ` ${message}`,
         }).then(() => {
