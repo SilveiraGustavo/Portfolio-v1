@@ -148,6 +148,8 @@ header nav.menu-desktop ul li {
     box-shadow: 0px 0px 8px #fff;
     transform: scale(1.05);
 }
+
+
 /* 
 Estilização do topo do site */
 
@@ -239,7 +241,6 @@ section.portfolio .flex {
 .overlay:hover {
     opacity: 1;
 }
-
 
 
  /* Estilização das Habilidades */
