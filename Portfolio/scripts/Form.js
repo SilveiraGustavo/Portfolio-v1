@@ -22,7 +22,7 @@ function sendMail (e) {
             To : 'gustavodiassilveira7@gmail.com',
             From :"contatosilveiragustavo@gmail.com",
             Subject: `Contato via Portfólio`,
-            Body: ` ${message}`,
+            Body: ` ${name} && ${message}`,
         }).then(() => {
             alert('Obrigado pelo seu contato!');
             location.reload();
