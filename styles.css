@@ -73,7 +73,7 @@ header nav ul {
 
 header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 /* Estilo do Menu Hamburguer */
@@ -137,10 +137,23 @@ header nav.menu-desktop ul li {
 .logo {
     color: #FFF;
     font-size: 22px;
+    text-align: center;
 }
 .logo span {
     color: #E74C3C;
 }
+.logo-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.logo-content i {
+    margin-right: 5px; 
+}
+.logo-content h2 {
+    margin-left: 5px;
+}
+
 /* Fim da estilização da logo marca  */
 
 
