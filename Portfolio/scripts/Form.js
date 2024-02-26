@@ -10,9 +10,9 @@ function sendMail (e) {
     const mail = document.getElementById('email').value;
     const message = document.getElementById('mensagem').value;
     const name = document.getElementById('nome').value;
-
-    // Verifica se todos os campos (e-mail, nome e  mensagem) foram preenchidos pelo usuário.
-    if (name && mail && message) {
+    const celular = document.getElementById('celular').value;
+    // Verifica se todos os campos (e-mail, nome, celular e  mensagem) foram preenchidos pelo usuário.
+    if (name && mail && celular && message) {
         // Se todos os campos estiverem preenchidos, usa a biblioteca 'Email.js'
         // para enviar o e-mail com os detalhes fornecidos pelo usuário.
         Email.send({
@@ -22,7 +22,7 @@ function sendMail (e) {
             To : 'gustavodiassilveira7@gmail.com',
             From :"contatosilveiragustavo@gmail.com",
             Subject: `Contato via Portfólio`,
-            Body: ` ${name}  ${message}`,
+            Body: ` ${name} ${celular}  ${message}` ,
         }).then(() => {
             alert('Obrigado pelo seu contato!');
             location.reload();

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #35495E;
+    background-color: #21303f;
     height: 100hv;
 }
 
@@ -500,7 +500,9 @@ footer .line-footer p a {
     footer .line-footer {
         text-align: center;
     }
+    
 }
+
 
 
 #particles-js {
@@ -511,5 +513,5 @@ footer .line-footer p a {
     width: 100%;
     height: 100vh;
     z-index: -1;
-    background-color: #35495E;
+    background-color: #21303f;
 }
